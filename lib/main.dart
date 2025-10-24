@@ -9,6 +9,13 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+  
   runApp(const MyApp());
 }
 
@@ -39,6 +46,7 @@ class MapSampleState extends State<MapSample> {
     target: LatLng(37.43296265331129, -122.08832357078792),
     zoom: 19.151926040649414,
   );
+
 
   @override
   void initState() {
